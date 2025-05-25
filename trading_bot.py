@@ -11,6 +11,7 @@ logging.basicConfig(
     format='%(asctime)s %(levelname)s: %(message)s'
 )
 
+#Basic Bot
 class BasicBot:
     def __init__(self, api_key, api_secret, testnet=True):
         self.api_key = api_key
