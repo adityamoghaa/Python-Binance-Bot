@@ -1,78 +1,78 @@
-# Python-Binance-Bot
-A simplified trading bot for the Binance Futures Testnet, built in Python using the `python-binance` library.
+# Python Binance Futures Testnet Bot
+
+A lightweight command-line trading bot for Binance USDT-M Futures Testnet, written in Python with the `python-binance` SDK.
+
+## Overview
+
+This project provides a simple interactive workflow for placing futures orders from the terminal while keeping the core trading actions encapsulated in a reusable `BasicBot` class.
 
 ## Features
 
-- **Market & Limit Orders:** Place buy/sell orders on USDT-M Futures.
-- **Stop-Limit Orders (Bonus):** Example advanced order type included.
-- **Command-Line Interface:** User-friendly prompts for order input and validation.
-- **Logging:** All API requests, responses, and errors are logged to `trading_bot.log`.
-- **Reusable Structure:** Core logic in a class for easy extension and reuse.
-- **Error Handling:** Graceful failure and clear feedback.
+- Place **MARKET** orders
+- Place **LIMIT** orders
+- Place **STOP_MARKET** orders (labeled as stop-limit in CLI flow)
+- Input validation for order side and quantity
+- File-based logging to `trading_bot.log`
+- Basic exception handling for Binance API failures
 
-## Requirements
+## Tech Stack
 
 - Python 3.7+
-- `python-binance` library
+- [`python-binance`](https://pypi.org/project/python-binance/)
 
 ## Getting Started
 
-1. **Register a Binance Futures Testnet account:**
-   - Go to [Binance Futures Testnet](https://testnet.binancefuture.com).
-   - Create an account and generate API credentials (API Key & Secret).
+### 1) Create Binance Testnet API Credentials
 
-2. **Install dependencies:**
-   ```bash
-   pip install python-binance
-   ```
+1. Visit the [Binance Futures Testnet](https://testnet.binancefuture.com/).
+2. Generate your API Key and API Secret.
 
-3. **Run the bot:**
-   ```bash
-   python basic_trading_bot.py
-   ```
-
-4. **Follow the CLI prompts:**
-   - Enter your API Key and Secret.
-   - Choose order types, symbol, side, quantity, and price as needed.
-
-## File Structure
-
-```
-Python-Binance-Bot/
-├── README.md
-├── basic_trading_bot.py
-└── trading_bot.log
-```
-
-## Example Usage
+### 2) Install Dependencies
 
 ```bash
-$ python basic_trading_bot.py
-Welcome to the Simplified Binance Futures Testnet Trading Bot!
-Enter your API Key: <your-api-key>
-Enter your API Secret: <your-api-secret>
-
-Supported symbols: BTCUSDT, ETHUSDT, etc. (USDT-M Futures)
-Order Types: market, limit, stop-limit (bonus)
-Symbol: BTCUSDT
-Order type (market/limit/stop-limit): market
-Side (buy/sell): buy
-Quantity: 0.001
-Order placed successfully!
-{ ...order details... }
+pip install python-binance
 ```
 
-## Extending the Bot
+### 3) Run the Bot
 
-- Add more order types by extending the `BasicBot` class.
-- For a more advanced CLI, consider integrating `argparse` or a simple web frontend.
+```bash
+python trading_bot.py
+```
+
+### 4) Follow the Interactive Prompts
+
+You will be prompted for:
+- API key and secret
+- Symbol (for example, `BTCUSDT`)
+- Order type (`market`, `limit`, `stop-limit`)
+- Side (`buy` / `sell`)
+- Quantity (and price fields where applicable)
+
+## Project Structure
+
+```text
+Python-Binance-Bot/
+├── trading_bot.py
+├── README.md
+└── LICENSE
+```
+
+## Logging
+
+The bot writes runtime logs to:
+
+```text
+trading_bot.log
+```
+
+This includes initialization details, order attempts, API responses, and errors.
+
+## Security Notes
+
+- Never share or commit your API credentials.
+- Use testnet keys only unless you intentionally switch to live trading endpoints.
+- Consider using environment variables or a secrets manager for production-grade key handling.
 
 ## Disclaimer
 
-- This bot is for educational and testing purposes **ONLY**.
-- It uses the **Binance Futures Testnet** and does **not** trade real funds.
-- Always keep your API keys private.
-
----
-
-Thank You!
+This project is intended for educational and testing purposes. Use at your own risk.
