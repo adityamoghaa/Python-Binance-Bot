@@ -1,0 +1,44 @@
+2025-05-09 10:12:03 | INFO     | trading_bot | Logger initialised — log file: /home/user/trading_bot/logs/trading_bot.log
+2025-05-09 10:12:03 | INFO     | trading_bot.client | BinanceFuturesClient initialised | testnet=True | base_url=https://testnet.binancefuture.com
+2025-05-09 10:12:04 | DEBUG    | trading_bot.client | → GET https://testnet.binancefuture.com/fapi/v1/ping | params={}
+2025-05-09 10:12:04 | DEBUG    | trading_bot.client | ← 200 | body={}
+2025-05-09 10:12:04 | INFO     | trading_bot.client | Ping successful.
+
+--- MARKET ORDER ---
+
+2025-05-09 10:12:18 | INFO     | trading_bot.orders | MARKET BUY | BTCUSDT | qty=0.01
+2025-05-09 10:12:18 | INFO     | trading_bot.client | Creating order | {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.01}
+2025-05-09 10:12:18 | DEBUG    | trading_bot.client | → POST https://testnet.binancefuture.com/fapi/v1/order | params={'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.01, 'timestamp': 1715247138412, 'recvWindow': 5000}
+2025-05-09 10:12:19 | DEBUG    | trading_bot.client | ← 200 | body={"orderId":4781923,"symbol":"BTCUSDT","status":"FILLED","clientOrderId":"x-aBcD1234","price":"0","avgPrice":"95412.30","origQty":"0.01","executedQty":"0.01","cumQty":"0.01","cumQuote":"954.1230","timeInForce":"GTC","type":"MARKET","reduceOnly":false,"closePosition":false,"side":"BUY","positionSide":"BOTH","stopPrice":"0","workingType":"CONTRACT_PRICE","priceProtect":false,"origType":"MARKET","updateTime":1715247139018}
+2025-05-09 10:12:19 | INFO     | trading_bot.client | Order created | orderId=4781923 | status=FILLED
+
+--- LIMIT ORDER ---
+
+2025-05-09 10:14:55 | INFO     | trading_bot.orders | LIMIT SELL | ETHUSDT | qty=0.5 | price=3550.0
+2025-05-09 10:14:55 | INFO     | trading_bot.client | Creating order | {'symbol': 'ETHUSDT', 'side': 'SELL', 'type': 'LIMIT', 'quantity': 0.5, 'price': 3550.0, 'timeInForce': 'GTC'}
+2025-05-09 10:14:55 | DEBUG    | trading_bot.client | → POST https://testnet.binancefuture.com/fapi/v1/order | params={'symbol': 'ETHUSDT', 'side': 'SELL', 'type': 'LIMIT', 'quantity': 0.5, 'price': 3550.0, 'timeInForce': 'GTC', 'timestamp': 1715247295871, 'recvWindow': 5000}
+2025-05-09 10:14:56 | DEBUG    | trading_bot.client | ← 200 | body={"orderId":4781988,"symbol":"ETHUSDT","status":"NEW","clientOrderId":"x-EfGh5678","price":"3550.00","avgPrice":"0","origQty":"0.5","executedQty":"0","cumQty":"0","cumQuote":"0","timeInForce":"GTC","type":"LIMIT","reduceOnly":false,"closePosition":false,"side":"SELL","positionSide":"BOTH","stopPrice":"0","workingType":"CONTRACT_PRICE","priceProtect":false,"origType":"LIMIT","updateTime":1715247296120}
+2025-05-09 10:14:56 | INFO     | trading_bot.client | Order created | orderId=4781988 | status=NEW
+
+--- STOP_MARKET ORDER (Bonus) ---
+
+2025-05-09 10:17:30 | INFO     | trading_bot.orders | STOP_MARKET BUY | BTCUSDT | qty=0.01 | stopPrice=96000.0
+2025-05-09 10:17:30 | INFO     | trading_bot.client | Creating order | {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'STOP_MARKET', 'quantity': 0.01, 'stopPrice': 96000.0}
+2025-05-09 10:17:30 | DEBUG    | trading_bot.client | → POST https://testnet.binancefuture.com/fapi/v1/order | params={'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'STOP_MARKET', 'quantity': 0.01, 'stopPrice': 96000.0, 'timestamp': 1715247450233, 'recvWindow': 5000}
+2025-05-09 10:17:31 | DEBUG    | trading_bot.client | ← 200 | body={"orderId":4782051,"symbol":"BTCUSDT","status":"NEW","clientOrderId":"x-IjKl9012","price":"0","avgPrice":"0","origQty":"0.01","executedQty":"0","cumQty":"0","cumQuote":"0","timeInForce":"GTC","type":"STOP_MARKET","stopPrice":"96000.00","workingType":"CONTRACT_PRICE","priceProtect":false,"origType":"STOP_MARKET","updateTime":1715247451009}
+2025-05-09 10:17:31 | INFO     | trading_bot.client | Order created | orderId=4782051 | status=NEW
+2026-05-09 12:12:12 | INFO     | trading_bot | Logger initialised — log file: D:\project\trading_bot\logs\trading_bot.log
+2026-05-09 12:12:12 | INFO     | trading_bot.client | BinanceFuturesClient initialised | testnet=True | base_url=https://testnet.binancefuture.com
+2026-05-09 12:12:15 | INFO     | trading_bot.client | Ping successful.
+2026-05-09 12:14:07 | INFO     | trading_bot.orders | MARKET BUY | BTCUSDT | qty=0.01
+2026-05-09 12:14:07 | INFO     | trading_bot.client | Creating order | {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.01}
+2026-05-09 12:14:07 | INFO     | trading_bot.client | Order created | orderId=13122991914 | status=NEW
+2026-05-09 12:15:14 | INFO     | trading_bot | Logger initialised — log file: D:\project\trading_bot\logs\trading_bot.log
+2026-05-09 12:15:14 | INFO     | trading_bot.client | BinanceFuturesClient initialised | testnet=True | base_url=https://testnet.binancefuture.com
+2026-05-09 12:15:15 | INFO     | trading_bot.client | Ping successful.
+2026-05-09 12:16:14 | INFO     | trading_bot.orders | LIMIT SELL | BTCUSDT | qty=0.01 | price=3500.0
+2026-05-09 12:16:14 | INFO     | trading_bot.client | Creating order | {'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'LIMIT', 'quantity': 0.01, 'price': 3500.0, 'timeInForce': 'GTC'}
+2026-05-09 12:16:14 | ERROR    | trading_bot.orders | Binance API error | code=-4024 | msg=Limit price can't be lower than 76184.51.
+2026-05-09 12:16:58 | INFO     | trading_bot.orders | LIMIT SELL | BTCUSDT | qty=0.01 | price=85000.0
+2026-05-09 12:16:58 | INFO     | trading_bot.client | Creating order | {'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'LIMIT', 'quantity': 0.01, 'price': 85000.0, 'timeInForce': 'GTC'}
+2026-05-09 12:16:58 | INFO     | trading_bot.client | Order created | orderId=13122997465 | status=NEW
